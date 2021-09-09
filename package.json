@@ -1,0 +1,24 @@
+{
+  "name": "wk10-team-profile-generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest __tests__"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/murda02/wk10-team-profile-generator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/murda02/wk10-team-profile-generator/issues"
+  },
+  "homepage": "https://github.com/murda02/wk10-team-profile-generator#readme",
+  "dependencies": {
+    "inquirer": "^8.1.2",
+    "jest": "^27.1.0"
+  }
+}
