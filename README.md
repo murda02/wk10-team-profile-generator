@@ -35,6 +35,7 @@ From the root directory where the code is deployed, execute the following comman
 ```
 node index.js
 ```
+Next you will be prompted with questions about what type of employee you want to add. You can choose from manager, engineer or intern. After that you will be prompted with questions about that employee. You can add as many employees as you want and when you're finished an HTML page will be generated detailing yout team!
 
 ## Tests
 
