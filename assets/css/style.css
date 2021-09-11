@@ -11,6 +11,7 @@
     font-size: 1.4rem;
     color: whitesmoke;
     display: flex;
+    text-align: left;
 }
 
 .card-body {
@@ -20,7 +21,7 @@
 
 .threecardmax {
     display: flex;
-    flex-direction: row;
+    flex-flow: row wrap;
     margin: 20px 20px 20px 20px;
     justify-content: center;
     width: 100vw;

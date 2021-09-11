@@ -176,28 +176,33 @@ function feeder() {
     let divs = []
     for (let i = 0; i < output.length; i++) {
         divs.push(
-            `<div class="card-header">${output[i].getName()}<br>${output[i].getRole()}</div>
+            `<div class="card text-white bg-primary mb-3">
+            <div class="card-header">${output[i].getName()}<br>${output[i].getRole()}</div>
             <div class="card-body">
             <p class="card-text">ID: ${output[i].getId()}</p>
             <br>
-            <p class="card-text">Email: ${output[i].getEmail()}</p>
-            </div>`)
+            <p class="card-text">Email: &nbsp; <a href="mailto:${output[i].getEmail()}">${output[i].getEmail()}</a></p>
+            <br>
+            `)
+            
         // divs.push(`<div><h2>employee id: ${output[i].getId()} </h2></div>`)
         // divs.push(`<div><h2>employee email: ${output[i].getEmail()} </h2></div>`)
 
         switch (output[i].getRole()) {
             case ("Manager"):
-                divs.push(`<div class="card-body"><p class="card-text">Manager's office number: ${output[i].getOfficeNum()}</p></div>`)
-                divs.join('')
+                divs.push(`<p class="card-text">Manager's office number: ${output[i].getOfficeNum()}</p></div></div>`)
+                // divs.join('')
                 break
             case ("Engineer"):
-                divs.push(`<div><a href="https://github.com/${output[i].getGithubUsername()}?tab=repositories" target="_blank">GitHub Repo's</a></div>`)
+                divs.push(`<p class="card-text">Github link: &nbsp; <a href="https://github.com/${output[i].getGithubUsername()}?tab=repositories" target="_blank">${output[i].getGithubUsername()}</a></p></div></div>`)
                 break
             case ("Intern"):
-                divs.push(`<div><h2>Intern's school: ${output[i].getSchool()} </h2></div>`)
+                divs.push(`<p class="card-text">Intern's school: ${output[i].getSchool()}</p></div></div>`)
                 break
         }
     }
+    divs = divs.join('')
+    // console.log("divs: ", divs);
     return divs
 }
 
@@ -223,9 +228,7 @@ function finished(output) {
                 My Team
             </div>
                 <div class=threecardmax>
-                <div class="card text-white bg-primary mb-3">
                     ${feeder()}
-                </div>
         </body>
         </html>`;
 

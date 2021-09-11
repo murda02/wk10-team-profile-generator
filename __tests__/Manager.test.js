@@ -7,7 +7,7 @@ describe("Manger's office number", () => {
       const manager = new Manager("Bob", 88, "employee@work.com", 217);
       console.log("manager.officeNUmber: ", manager.officeNUmber)
       console.log("manger object: ", manager);
-      expect(manager.officeNUmber).toEqual(217);
+      expect(manager.getOfficeNum()).toEqual(217);
     });
   });
   
