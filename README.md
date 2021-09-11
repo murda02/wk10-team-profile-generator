@@ -24,6 +24,10 @@ Create a new directory to clone the code to, then execute the following command:
 ```
 git clone git@github.com:murda02/wk10-team-profile-generator.git
 ```
+Next you need to get the 3rd party dependencies, in the same directory execute the below command:
+```
+npm i
+```
 
 ## Usage
 
