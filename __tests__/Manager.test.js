@@ -5,8 +5,6 @@ const Manager = require('../lib/Manager')
 describe("Manger's office number", () => {
     it("should return the manager's office number", () => {
       const manager = new Manager("Bob", 88, "employee@work.com", 217);
-      console.log("manager.officeNUmber: ", manager.officeNUmber)
-      console.log("manger object: ", manager);
       expect(manager.getOfficeNum()).toEqual(217);
     });
   });
@@ -15,9 +13,6 @@ describe("Manger's office number", () => {
   describe("Employee role", () => {
     it("should return the employee's role", () => {
       const manager = new Manager("Bob", 88, "employee@work.com", 217);
-      console.log("manager.officeNUmber: ", manager.officeNUmber)
-      console.log("manger object: ", manager);
-      console.log("manager.getRole(): ", manager.getRole());
       expect(manager.getRole()).toEqual("Manager");
     });
   });

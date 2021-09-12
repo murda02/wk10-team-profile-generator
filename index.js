@@ -23,7 +23,6 @@ const decisionPrompt = () => {
                 validate: (value) => { if (value) { return true } else { return 'Please enter the managers name.' } }
             },
         ]).then(response => {
-            // console.log(response)
             switch (response.decision) {
                 case ("Yes"):
                     startPrompt()
@@ -46,7 +45,6 @@ const startPrompt = () => {
                 validate: (value) => { if (value) { return true } else { return 'Please enter the managers name.' } }
             },
         ]).then(response => {
-            // console.log(response)
             switch (response.empType) {
                 case ("Manager"):
                     managerPrompt()
@@ -89,11 +87,8 @@ const managerPrompt = () => {
                 validate: (value) => { if (value) { return true } else { return 'Please enter the manager’s office number.' } }
             }
         ]).then(response => {
-            // console.log(response);
-            // console.log
             let manager = new Manager(response.managername, response.managerid, response.manageremail, response.managerofficenum)
             output.push(manager);
-            console.log("manager name: ", output[0].getName());
             decisionPrompt()
         })
 }
@@ -126,11 +121,8 @@ const engineerPrompt = () => {
                 validate: (value) => { if (value) { return true } else { return 'Please enter the engineer’s username.' } }
             }
         ]).then(response => {
-            // console.log(response);
-            // console.log
             let engineer = new Engineer(response.engineername, response.engineerid, response.engineeremail, response.engineergithub)
             output.push(engineer);
-            console.log("engineer name: ", output[0].getName());
             decisionPrompt()
         })
 }
@@ -163,11 +155,8 @@ const internPrompt = () => {
                 validate: (value) => { if (value) { return true } else { return 'Please enter the intern’s school.' } }
             }
         ]).then(response => {
-            // console.log(response);
-            // console.log
             let intern = new Intern(response.internname, response.internid, response.internemail, response.internschool)
             output.push(intern);
-            console.log("intern name: ", output[0].getName());
             decisionPrompt()
         })
 }
@@ -202,12 +191,10 @@ function feeder() {
         }
     }
     divs = divs.join('')
-    // console.log("divs: ", divs);
     return divs
 }
 
 function finished(output) {
-    console.log("output ", output);
     const filename = `index.html`;
     let htmlContent =
         `

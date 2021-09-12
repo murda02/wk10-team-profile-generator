@@ -104,4 +104,7 @@ typings/
 
 scratch.txt
 dave.html
-index.html
+dave.js
+dave_index.html
+index_old.js
+package-lock.json

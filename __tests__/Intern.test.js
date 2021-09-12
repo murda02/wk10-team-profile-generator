@@ -5,8 +5,6 @@ const Intern = require('../lib/Intern')
 describe("Intern school", () => {
     it("should return the intern's school", () => {
       const intern = new Intern("Bob", 88, "employee@work.com", "RIT");
-      console.log("intern.school: ", intern.school)
-      console.log("intern object: ", intern);
       expect(intern.school).toEqual("RIT");
     });
   });
@@ -15,8 +13,6 @@ describe("Intern school", () => {
   describe("Employee role", () => {
     it("should return the employee's role", () => {
       const intern = new Intern("Bob", 88, "employee@work.com", "RIT");
-      console.log("intern object: ", intern);
-      console.log("intern.getRole(): ", intern.getRole());
       expect(intern.getRole()).toEqual("Intern");
     });
   });
