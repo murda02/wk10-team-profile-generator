@@ -37,6 +37,10 @@ node index.js
 ```
 Next you will be prompted with questions about what type of employee you want to add. You can choose from manager, engineer or intern. After that you will be prompted with questions about that employee. You can add as many employees as you want and when you're finished an HTML page will be generated detailing your team!
 
+Below is a link to a walkthrough video that shows how to run the tests and use the application:
+
+[Walkthrough video link](https://drive.google.com/file/d/1J1qFFqmt2KAiDS59o9Usm7u76c-6ywAU/view?usp=sharing)
+
 ## Tests
 
 From the root directory where the code is deployed, execute the following command: 
